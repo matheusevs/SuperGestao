@@ -9,7 +9,7 @@ class PrincipalController extends Controller
     
     public function principal(){
 
-        echo 'Home';
+        return view('site.principal');
 
     }
 
