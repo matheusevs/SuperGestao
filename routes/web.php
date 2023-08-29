@@ -18,12 +18,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'PrincipalController@principal');
-
 Route::get('/sobre-nos', 'SobreNosController@sobreNos');
-
 Route::get('/contato', 'ContatoController@contato');
-
 Route::get('/login', function(){return 'login';});
-Route::get('/clientes', function(){return 'clientes';});
-Route::get('/fornecedores', function(){return 'fornecedores';});
-Route::get('/produtos', function(){return 'produtos';});
+
+Route::prefix('/app')->group(function(){
+    Route::get('/clientes', function(){return 'clientes';});
+    Route::get('/fornecedores', function(){return 'fornecedores';});
+    Route::get('/produtos', function(){return 'produtos';});
+});
