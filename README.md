@@ -1,4 +1,4 @@
-php artisan db:seed
+php artisan db:seed --class=MotivoContatoSeeder -> Utilizar para criar motivos para o contato.
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
