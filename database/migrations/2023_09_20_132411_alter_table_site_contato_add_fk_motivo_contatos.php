@@ -20,7 +20,7 @@ class AlterTableSiteContatoAddFkMotivoContatos extends Migration
         DB::statement('update site_contatos set motivo_contatos_id = motivo_contato');
 
         Schema::table('site_contatos', function (Blueprint $table) {
-            $table->foreign('motivo_contatos_id')->references('id')->on('motivo_contato');
+            $table->foreign('motivo_contatos_id')->references('id')->on('motivo_contatos');
             $table->dropColumn('motivo_contato');
         });
     }
